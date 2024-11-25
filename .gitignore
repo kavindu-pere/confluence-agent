@@ -20,4 +20,9 @@ drivers/
 error-screenshots/
 webpack.generated.js
 
+# Ignore Docker volumes
 volumes/
+
+# Ignore node_modules in the extension
+extension/node_modules/
+extension/dist/
