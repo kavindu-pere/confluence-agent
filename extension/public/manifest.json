@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Confluence Chat",
+    "version": "1.0",
+    "description": "Chat with your Confluence documents",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_title": "Confluence Chat"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }],
+    "web_accessible_resources": [{
+      "resources": ["widget.html"],
+      "matches": ["<all_urls>"]
+    }]
+  }
