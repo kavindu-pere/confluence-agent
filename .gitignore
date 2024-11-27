@@ -21,7 +21,7 @@ error-screenshots/
 webpack.generated.js
 
 # Ignore Docker volumes
-volumes/
+docker-compose/volumes/
 
 # Ignore node_modules in the extension
 extension/node_modules/

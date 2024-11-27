@@ -1,5 +1,8 @@
 package com.cypher.ai;
 
+import static org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY;
+import static org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvisor.CHAT_MEMORY_RETRIEVE_SIZE_KEY;
+
 import java.time.LocalDateTime;
 
 import org.springframework.ai.chat.client.ChatClient;
@@ -7,12 +10,11 @@ import org.springframework.ai.chat.client.advisor.PromptChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.stereotype.Service;
 
+import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 
-import static org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY;
-import static org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvisor.CHAT_MEMORY_RETRIEVE_SIZE_KEY;
-
 @Service
+@Slf4j
 public class AiAgent {
 
     private final ChatClient chatClient;
@@ -30,10 +32,10 @@ public class AiAgent {
                 .defaultAdvisors(
                         new PromptChatMemoryAdvisor(chatMemory))
                 .build();
-
     }
 
     public Flux<String> chat(String chatId, String userMessage) {
+
         return chatClient.prompt()
                 .system(sys -> sys.param("current_date", LocalDateTime.now().toString()))
                 .user(userMessage)

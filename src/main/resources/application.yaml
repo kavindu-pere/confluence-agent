@@ -1,0 +1,44 @@
+
+server:
+  port: ${PORT:8080}
+
+logging:
+  level:
+    '[org.atmosphere]': warn
+
+spring:
+  mustache:
+    check-template-location: false
+  jpa:
+    defer-datasource-initialization: true
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3.2
+        options:
+          temperature: 0.1
+      embedding:
+        model: nomic-embed-text
+    vectorstore:
+        milvus:
+            client:
+                host: "localhost"
+                port: 19530
+                username: "root"
+                password: "milvus"
+            database-name: "default"
+            collection-name: "vector_store"
+            embedding-dimension: 768
+            index-type: IVF_FLAT
+            metric-type: COSINE
+            initialize-schema: true
+            index-parameters: '{"nlist": 16384}'
+
+app:
+  confluence-url: "https://cypher-doing-ai.atlassian.net"
+
+
+vaadin:
+  launch-browser: true
+  allowed-packages: com.vaadin,org.vaadin,com.cypher

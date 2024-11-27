@@ -16,7 +16,6 @@
     "@vaadin/hilla-react-signals": "24.5.5",
     "@vaadin/polymer-legacy-adapter": "24.5.3",
     "@vaadin/react-components": "24.5.3",
-    "@vaadin/react-components-pro": "24.5.3",
     "@vaadin/router": "2.0.0",
     "@vaadin/vaadin-development-mode-detector": "2.0.7",
     "@vaadin/vaadin-lumo-styles": "24.5.3",
@@ -28,7 +27,6 @@
     "lit": "3.2.1",
     "nanoid": "^5.0.8",
     "no-name": "file:",
-    "proj4": "2.12.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-markdown": "^9.0.1",
@@ -80,7 +78,6 @@
       "@vaadin/hilla-react-signals": "24.5.5",
       "@vaadin/polymer-legacy-adapter": "24.5.3",
       "@vaadin/react-components": "24.5.3",
-      "@vaadin/react-components-pro": "24.5.3",
       "@vaadin/router": "2.0.0",
       "@vaadin/vaadin-development-mode-detector": "2.0.7",
       "@vaadin/vaadin-lumo-styles": "24.5.3",
@@ -90,7 +87,6 @@
       "construct-style-sheets-polyfill": "3.1.0",
       "date-fns": "2.29.3",
       "lit": "3.2.1",
-      "proj4": "2.12.1",
       "react": "18.3.1",
       "react-dom": "18.3.1",
       "react-router-dom": "6.28.0"
@@ -126,7 +122,7 @@
       "workbox-core": "7.3.0",
       "workbox-precaching": "7.3.0"
     },
-    "hash": "2722e12bef4f29610cf8c7bcc01757d57182ee2e2957372ab3b5f2bb2d1a7001"
+    "hash": "8444e1b4be103d0bd096c801537a6c32ef6e0855108134007fe8869437fbbb2a"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
@@ -135,7 +131,6 @@
     "@vaadin/router": "$@vaadin/router",
     "@vaadin/vaadin-usage-statistics": "$@vaadin/vaadin-usage-statistics",
     "@vaadin/react-components": "$@vaadin/react-components",
-    "@vaadin/react-components-pro": "$@vaadin/react-components-pro",
     "@vaadin/common-frontend": "$@vaadin/common-frontend",
     "react-dom": "$react-dom",
     "@vaadin/hilla-frontend": "$@vaadin/hilla-frontend",
@@ -152,7 +147,6 @@
     "@vaadin/hilla-react-form": "$@vaadin/hilla-react-form",
     "@vaadin/hilla-react-signals": "$@vaadin/hilla-react-signals",
     "date-fns": "$date-fns",
-    "proj4": "$proj4",
     "@vaadin/vaadin-themable-mixin": "$@vaadin/vaadin-themable-mixin",
     "@vaadin/vaadin-lumo-styles": "$@vaadin/vaadin-lumo-styles",
     "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles",
