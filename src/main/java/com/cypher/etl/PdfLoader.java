@@ -23,6 +23,7 @@ public class PdfLoader {
     @Value("classpath:data/*.pdf")
     private Resource[] resources;
 
+    // @PostConstruct
     public void init() {
         var readerConfig = PdfDocumentReaderConfig.builder()
                 .withPageExtractedTextFormatter(

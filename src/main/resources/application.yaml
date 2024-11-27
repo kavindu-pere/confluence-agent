@@ -17,9 +17,9 @@ spring:
       base-url: http://localhost:11434
       chat:
         model: llama3.2
-        # options:
-        # temperature: 0.5
-        # top-k: 5
+        options:
+          temperature: 0.9
+          top-k: 10
       embedding:
         model: nomic-embed-text
     vectorstore:

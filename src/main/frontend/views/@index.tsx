@@ -51,12 +51,37 @@ export default function ConfluenceAgent() {
   }
 
   return (
-    <VerticalLayout className="h-full" theme="spacing padding" style={{ alignItems: 'center' }}>
-      <div className="flex flex-col gap-m p-m box-border h-full" style={{ width: '50%' }}>
-        <h2>Samantha the Confluence agent</h2>
-        <MessageList messages={messages} className="flex-grow overflow-scroll" />
-        <MessageInput onSubmit={e => sendMessage(e.detail.value)} className="px-0" disabled={working}/>
+    <div style={{ position: 'relative', height: '100vh', width: '100%' }}>
+      <div
+        id="logo-div"
+        style={{
+          position: 'absolute',
+          bottom: '20px',
+          left: '20px',
+          zIndex: 1000
+        }}
+      >
+        <img
+          src="images/logo.png"
+          alt="Application Logo"
+          style={{ maxWidth: '150px', height: 'auto' }}
+        />
       </div>
-    </VerticalLayout >
+      <VerticalLayout
+        className="h-full"
+        theme="spacing padding"
+        style={{
+          alignItems: 'center',
+          height: '100vh',
+          width: '100%'
+        }}
+      >
+        <div className="flex flex-col gap-m p-m box-border h-full" style={{ width: '50%' }}>
+          <h2>Samantha the Confluence Agent</h2>
+          <MessageList messages={messages} className="flex-grow overflow-scroll" />
+          <MessageInput onSubmit={e => sendMessage(e.detail.value)} className="px-0" disabled={working} />
+        </div>
+      </VerticalLayout>
+    </div>
   );
 }
