@@ -11,7 +11,7 @@ export default function ConfluenceAgent() {
   const [working, setWorking] = useState(false);
   const [messages, setMessages] = useState<MessageItem[]>([{
     role: 'agent',
-    content: 'Welcome to Confluence Chat! How can I help you?'
+    content: 'Welcome to Confluence Chat! How can I help you today?'
   }]);
 
   async function sendMessage(message: string) {
@@ -53,7 +53,7 @@ export default function ConfluenceAgent() {
   return (
     <VerticalLayout className="h-full" theme="spacing padding" style={{ alignItems: 'center' }}>
       <div className="flex flex-col gap-m p-m box-border h-full" style={{ width: '50%' }}>
-        <h1>Confluence Agent</h1>
+        <h2>Samantha the Confluence agent</h2>
         <MessageList messages={messages} className="flex-grow overflow-scroll" />
         <MessageInput onSubmit={e => sendMessage(e.detail.value)} className="px-0" disabled={working}/>
       </div>
