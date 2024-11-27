@@ -11,7 +11,7 @@ export default function ConfluenceAgent() {
   const [working, setWorking] = useState(false);
   const [messages, setMessages] = useState<MessageItem[]>([{
     role: 'agent',
-    content: 'Welcome to Confluencet Chat! How can I help you?'
+    content: 'Welcome to Confluence Chat! How can I help you?'
   }]);
 
   async function sendMessage(message: string) {
