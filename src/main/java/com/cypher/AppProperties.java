@@ -1,4 +1,4 @@
-package com.cypher.config;
+package com.cypher;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

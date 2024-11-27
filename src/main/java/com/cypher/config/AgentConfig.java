@@ -10,7 +10,7 @@ class AgentConfig {
 
     @Bean
     ChatMemory chatMemory() {
-       return new InMemoryChatMemory();
+        return new InMemoryChatMemory();
     }
 
 }
