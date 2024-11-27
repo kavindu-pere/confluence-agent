@@ -4,13 +4,11 @@ import static org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvis
 import static org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvisor.CHAT_MEMORY_RETRIEVE_SIZE_KEY;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.PromptChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.QuestionAnswerAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
-import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.stereotype.Service;
@@ -23,7 +21,6 @@ import reactor.core.publisher.Flux;
 public class AiAgent {
 
     private final ChatClient chatClient;
-    private final VectorStore vectorStore;
 
     public AiAgent(ChatClient.Builder chatClient, ChatMemory chatMemory, VectorStore vectorStore) {
         this.chatClient = chatClient
@@ -41,7 +38,6 @@ public class AiAgent {
                         new PromptChatMemoryAdvisor(chatMemory),
                         new QuestionAnswerAdvisor(vectorStore, SearchRequest.defaults()))
                 .build();
-        this.vectorStore = vectorStore;
     }
 
     public Flux<String> chat(String chatId, String userMessage) {
